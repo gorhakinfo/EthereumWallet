@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scanner Controller-->
+        <scene sceneID="L4H-zr-rRK">
+            <objects>
+                <viewController storyboardIdentifier="QRScannerController" id="zpX-Oc-l8I" customClass="QRScannerController" customModule="EthereumWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HXY-mt-Jud">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Jw-Ki-jAg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfY-8n-5bW">
+                                        <rect key="frame" x="185" y="38" width="44" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsc-8J-57l">
+                                        <rect key="frame" x="15" y="39" width="18" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="18" id="Jhn-zQ-mkK"/>
+                                            <constraint firstAttribute="width" constant="18" id="nRX-lY-fYT"/>
+                                            <constraint firstAttribute="height" constant="18" id="ocM-e6-VjI"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="cross"/>
+                                        <connections>
+                                            <action selector="closeTapped:" destination="zpX-Oc-l8I" eventType="touchUpInside" id="Wj5-Tu-ZCv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="HfY-8n-5bW" secondAttribute="bottom" constant="8" id="2DL-uv-mcz"/>
+                                    <constraint firstAttribute="height" constant="70" id="FwB-Uy-sdD"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fsc-8J-57l" secondAttribute="bottom" constant="13" id="Ui1-7q-pp1"/>
+                                    <constraint firstItem="Fsc-8J-57l" firstAttribute="leading" secondItem="9Jw-Ki-jAg" secondAttribute="leading" constant="15" id="VMl-pW-QuI"/>
+                                    <constraint firstItem="HfY-8n-5bW" firstAttribute="centerX" secondItem="9Jw-Ki-jAg" secondAttribute="centerX" id="tWz-EC-fEF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="9Jw-Ki-jAg" firstAttribute="leading" secondItem="HXY-mt-Jud" secondAttribute="leading" id="E9f-6f-U6v"/>
+                            <constraint firstItem="b0V-2Z-23Z" firstAttribute="trailing" secondItem="9Jw-Ki-jAg" secondAttribute="trailing" id="oZJ-ce-ker"/>
+                            <constraint firstItem="9Jw-Ki-jAg" firstAttribute="top" secondItem="HXY-mt-Jud" secondAttribute="top" id="okU-Fh-1v4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b0V-2Z-23Z"/>
+                    </view>
+                    <connections>
+                        <outlet property="topbar" destination="9Jw-Ki-jAg" id="vku-77-6vX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNG-fI-aJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="56"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cross" width="40" height="40"/>
+    </resources>
+</document>

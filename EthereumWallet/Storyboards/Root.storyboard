@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lZ1-zT-msY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ENu-iq-WS7">
+            <objects>
+                <navigationController id="lZ1-zT-msY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="iX9-BQ-qD3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ze7-Ie-aoN" kind="relationship" relationship="rootViewController" id="L6T-nL-Zv9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XJr-cg-FXA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-328" y="165"/>
+        </scene>
+        <!--Setup-->
+        <scene sceneID="7gu-L7-EXb">
+            <objects>
+                <viewController storyboardIdentifier="SetupViewController" id="ze7-Ie-aoN" customClass="SetupViewController" customModule="EthereumWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VLB-VC-wJW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Private Key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGz-Rt-Lli">
+                                <rect key="frame" x="20" y="170" width="374" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hcJ-uZ-ABV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ze7-Ie-aoN" id="MOR-dc-3ZK"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTR-yu-neB">
+                                <rect key="frame" x="20" y="218" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.3411764706" green="0.67843137249999996" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="AQe-vr-eoZ"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonTapped:" destination="ze7-Ie-aoN" eventType="touchUpInside" id="xRj-aE-fJw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZTR-yu-neB" firstAttribute="trailing" secondItem="eGz-Rt-Lli" secondAttribute="trailing" id="2YC-82-R83"/>
+                            <constraint firstItem="eGz-Rt-Lli" firstAttribute="leading" secondItem="BSg-5v-hUk" secondAttribute="leading" constant="20" id="8Gu-cm-IME"/>
+                            <constraint firstItem="BSg-5v-hUk" firstAttribute="trailing" secondItem="eGz-Rt-Lli" secondAttribute="trailing" constant="20" id="97v-sO-uuH"/>
+                            <constraint firstItem="ZTR-yu-neB" firstAttribute="leading" secondItem="eGz-Rt-Lli" secondAttribute="leading" id="AU7-Fy-vo1"/>
+                            <constraint firstItem="ZTR-yu-neB" firstAttribute="top" secondItem="eGz-Rt-Lli" secondAttribute="bottom" constant="8" id="QTA-kZ-9fu"/>
+                            <constraint firstItem="eGz-Rt-Lli" firstAttribute="top" secondItem="BSg-5v-hUk" secondAttribute="top" constant="30" id="SNV-yb-Evn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BSg-5v-hUk"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Setup" id="hSt-6J-GiC"/>
+                    <connections>
+                        <outlet property="privateKeyTextField" destination="eGz-Rt-Lli" id="wWy-bh-ean"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58n-Wt-jYp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="417" y="166"/>
+        </scene>
+    </scenes>
+</document>
